@@ -18,6 +18,8 @@ typedef struct {
 #define MAX_CITY    21
 
 
+
+
 void PrintCity(City city)
 {
     printf("%d, %s, %s, %d, %d, %d\n", city.id, city.pref, city.name, city.population, city.m_population, city.f_population);
@@ -65,6 +67,7 @@ int LoadData(City arrayCity[])
 int LinearSearch(int key, City arrayCity[], int size)
 {
     //  ここを実装する
+    
 
 
 }
