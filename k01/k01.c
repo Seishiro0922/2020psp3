@@ -66,17 +66,43 @@ int LoadData(City arrayCity[])
 
 int LinearSearch(int key, City arrayCity[], int size)
 {
-    //  ここを実装する
-    
+    int result=-1;
+    int pos=0;
+    size=MAX_CITY;
 
+    while(pos<size){
+        if(key==arrayCity[pos].id){
+            result=pos;
+            break;
+        }
+        else{pos++;}
+    }
+
+    return result;
 
 }
 
 int BinarySearch(int key, City arrayCity[], int left, int right)
 {
-    //  ここを実装する
+    int result=-1;
+    int pos;
+    left=0;
+    right=MAX_CITY-1;
 
-
+    while(left<=right){
+        pos=left+(right-left)/2;
+        if(key==arrayCity[pos].id){
+            result=pos;
+            break;
+        }
+        else if(key>arrayCity[pos].id){
+            left=pos+1;
+        }
+        else{
+            right=pos-1;
+        }
+    }
+    return result;
 }
 
 
@@ -85,6 +111,7 @@ int main(void)
 {
     int key;
     int result;
+    int pos;
 
     //  事前準備。データの読み込み、配列の作成
     City* arrayCity;
