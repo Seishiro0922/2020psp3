@@ -103,16 +103,17 @@ int SearchCityByName(Node* pList, char* cityName, City* pCity)
 int SearchCityByID(Node* pList, int ID, City* pCity)
 {
      int i=-1;
+     int j=-1;
 
-     while(i<MAX_CITY-1){
-         i=i+1;
+     while(j<MAX_CITY-1){
+         j=j+1;
          if((pList->city.id)==ID){
              *pCity=pList->city;
+             i=j;
              break;
          }
          pList=pList->pNext;
      }
-     if(i==20){i=-1;}
      return i;
 }
 
@@ -121,7 +122,6 @@ int main(void)
     char buf[256];
     FILE* fp;
     int key;
-    int i;
 
     fp = fopen("nagasaki.csv","r");
     if(fp==NULL){
