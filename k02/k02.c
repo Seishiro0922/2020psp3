@@ -102,7 +102,7 @@ int SearchCityByName(Node* pList, char* cityName, City* pCity)
 
 int SearchCityByID(Node* pList, int ID, City* pCity)
 {
-     int i=-1;
+     int i=-1;  
      int j=-1;
 
      while(j<MAX_CITY-1){
