@@ -49,7 +49,7 @@ char* BMSearch(char text[], char key[])
     }
     
     for(i=keylen;i<=textlen;i=pos+k){
-        for(pos=i;pos1!=0;pos--){
+        for(pos=i;pos1!=0;pos--){ 
              pos1=keylen-j;
             if(text[pos]==key[pos1]){
             j++;

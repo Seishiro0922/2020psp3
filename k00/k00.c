@@ -4,13 +4,15 @@
 
 
 
-void func(int* a)
+int main(void)
 {
-*a = 1;
-}
-int main()
-{
-int* a;
-func(a);
-printf("%d\n",&a);
+    double a,b,c;
+    a=1.05946309436;
+    c=221.5;
+
+    for(b=1;b<=10;b++){
+        c=c*a;
+        printf("c=%d\n",c);
+    }
+   return 0;
 }
