@@ -1,18 +1,26 @@
 #include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
+#include <math.h>
 
-
-
-int main(void)
+double f(double x)
 {
-    double a,b,c;
-    a=1.05946309436;
-    c=221.5;
+    return (x*x-2);
+}
 
-    for(b=1;b<=10;b++){
-        c=c*a;
-        printf("c=%d\n",c);
+int main()
+{
+    double x,xn,fd,h;
+    x = 2.0;
+    h=0.0001;
+    while(1){
+        printf("x=%lf\n",x);
+        fd=(f(x+h)-f(x))/h;
+        xn=x-f(x)/fd;
+        if(fabs(xn-x)<0.00001){
+                break;
+        }else{
+               x=xn;
+        }
     }
+    printf("answer=%lf\n",xn);
    return 0;
 }
