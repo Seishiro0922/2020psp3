@@ -117,7 +117,7 @@ void DepthFirstSearch(int size, int matrix[size][size], int start)
 
     while(StackIsEmpty()==FALSE){
 
-        j=StackPop();
+        j=StackPop(); 
 
         if(visited[j]==0){
              visited[j]=1;
